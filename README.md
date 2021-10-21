@@ -78,7 +78,7 @@ To configure MIPVerify, we extracted MIP problem formulations and configure Guro
 2. specify a scenario for SMAC (see ```example_scenario_gurobi.txt``` for reference) and place it in the respective aclib folder
 3. run Hydra as outlined above.
 
-The resulting Gurobi configuration(s) can be set directly in MIPVerify to perform evaluation on the full MNIST dataset.
+The resulting Gurobi configuration(s) can be set directly in MIPVerify to perform evaluation on the full MNIST dataset. MIPVerify contains a function that can automatically load the MNIST dataset.
 
 # References
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299

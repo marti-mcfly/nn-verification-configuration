@@ -42,16 +42,26 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 ```
 
+## Install Venus requirements
+
+```sh
+pip3 install -r requirements.txt
+```
+
 ## General setup
 
 Once you have downloaded the aclib library and installed its requirements, you should
 
 1. place the contents from ```instances``` in the similary named folder in aclib and adapt the instance paths in training and test set files;
-2. place the contents from ```target_algorithms``` in the similary named folder in aclib and adapt the network path in ```run_venus.py```;
-3. create a scenario file (see ```example_scenario_venus``` ```example_scenario_mipverify``` for reference);
-4. create a hydra script (see ```example_hydra_script``` for reference).
+2. place the contents from ```target_algorithms``` in the similary named folder in aclib.
 
 ## Configure Venus
+
+To configure Venus, we use a wrapper that directly accesses the Gurobi parameters through the Venus interface. To start the configuration procedure, you should
+
+1.  adapt the network path in ```target_algorithms/venus/run_venus.py```;
+2.  adapt the binary path in ```target_algorithms/venus/wrapper.py```;
+3.  
 
 
 

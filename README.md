@@ -28,6 +28,12 @@ tar xvfz gurobi9.0.1_linux64.tar.gz
 cd gurobi901/linux64
 python3 setup.py install
 ```
+Next, add the following to the .bashrc file:
+```
+export GUROBI_HOME="your/path/here/gurobi901/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+```
 
 # References
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299

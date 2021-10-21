@@ -11,11 +11,16 @@ This repository provides
 
 # Usage
 
-Required tools:
+## Required tools:
 
 - Gurobi v9.0.1 (www.gurobi.com)
 - SMAC v2.10.3 (http://www.cs.ubc.ca/labs/beta/Projects/SMAC/)
 - Hydra v1.1 (http://www.cs.ubc.ca/labs/beta/Projects/Hydra/)
+
+Verification engines:
+
+- Venus v1.10 (https://vas.doc.ic.ac.uk/software/neural/)
+- MIPVerify v0.2.3 (https://github.com/vtjeng/MIPVerify.jl)
  
 For our configuration experiments, we used the framework provided in the 
 
@@ -34,6 +39,11 @@ export GUROBI_HOME="your/path/here/gurobi901/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 ```
+
+## Configure Venus
+
+
+
 
 # References
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299

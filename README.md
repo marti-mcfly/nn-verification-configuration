@@ -6,8 +6,8 @@ The companion repository to the paper
 
 This repository provides
 
-- an example for the configuration of the Venus verifier [1]
-- an example for the configuration of the MIPVerify verifier [2]
+- an example for the configuration of the Venus verifier [1];
+- an example for the configuration of the MIPVerify verifier [2].
 
 In both cases, the considered network is an MNIST classifier designed for robustness taken from [3].
 
@@ -64,8 +64,21 @@ To configure Venus, we use a wrapper that directly accesses the Gurobi parameter
 1.  adapt the network path in ```target_algorithms/venus/run_venus.py```;
 2.  adapt the binary path in ```target_algorithms/venus/wrapper.py```;
 3.  specify a scenario for SMAC (see ```example_scenario_venus.txt``` for reference) and place it in the respective aclib folder;
-4.  run Hydra with the following commands: ```/your/path/here/hydra-1.1-development-cae8151/bin/hydra --num-iterations 4 --num-smac-runs 2 --num-configs-per-iter 1 --rungroup Hydra_Venus --num-run 1 --smacOptions /your/path/here/aclib2/scenarios/.../your-scenario-file.txt --smac-execution-options /your/path/here/hydra-1.1-development-cae8151/smac-execution-options-local.txt```;
-5.  the resulting Gurobi configuration(s) can be set directly in Venus to perform evaluation on the full MNIST dataset (we provide a full version of the MNIST dataset in ```.pkl``` format, see ```MNIST-full```).
+4.  run Hydra with the following commands: 
+
+```/your/path/here/hydra-1.1-development-cae8151/bin/hydra --num-iterations 4 --num-smac-runs 2 --num-configs-per-iter 1 --rungroup Hydra_Venus --num-run 1 --smacOptions /your/path/here/aclib2/scenarios/.../your-scenario-file.txt --smac-execution-options /your/path/here/hydra-1.1-development-cae8151/smac-execution-options-local.txt```
+
+The resulting Gurobi configuration(s) can be set directly in Venus to perform evaluation on the full MNIST dataset (we provide a full version of the MNIST dataset in ```.pkl``` format, see ```MNIST-full```).
+
+## Configure MIPVerify
+
+To configure MIPVerify, we extracted MIP problem formulations and configure Gurobi independently. To start the configuration procedure, you should
+
+1. adapt the binary path in ```target_algorithms/gurobi902/wrapper.py```;
+2. specify a scenario for SMAC (see ```example_scenario_venus.txt``` for reference) and place it in the respective aclib folder
+3. run Hydra as outlined above.
+
+The resulting Gurobi configuration(s) can be set directly in MIPVerify to perform evaluation on the full MNIST dataset; please follow the documentation on https://vtjeng.com/MIPVerify.jl/v0.2/. 
 
 # References
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299

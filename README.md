@@ -35,7 +35,7 @@ tar xvfz gurobi9.0.1_linux64.tar.gz
 cd gurobi901/linux64
 python3 setup.py install
 ```
-Next, add the following to the .bashrc file:
+Next, add the following to the ```.bashrc``` file:
 ```
 export GUROBI_HOME="your/path/here/gurobi901/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"

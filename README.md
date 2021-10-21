@@ -2,7 +2,9 @@
 
 The companion repository to the paper 
 
-**Speeding Up Neural Network Robustness Verification via Algorithm Configuration and an Optimised Mixed Integer Linear Programming Solver Portfolio**, Matthias König, Holger H Hoos, Jan N van Rijn, to be published. See https://aisecure-workshop.github.io/aml-iclr2021/papers/36.pdf for an extended abstract.
+**Speeding Up Neural Network Robustness Verification via Algorithm Configuration and an Optimised Mixed Integer Linear Programming Solver Portfolio**, Matthias König, Holger H Hoos, Jan N van Rijn, to be published. 
+
+See https://aisecure-workshop.github.io/aml-iclr2021/papers/36.pdf for an extended abstract.
 
 This repository provides
 

@@ -11,7 +11,7 @@ auto_aggfill_on     categorical {0, 1} [1] # TODO figure out sensible upper boun
 aggfill             integer     [1, 2048] [1024]  # int in [0, MAXINT]
 aggregate       categorical {0, 1} [1]    # on or off
 dualreductions  categorical {0, 1} [1]    # on or off
-precrush        categorical {1} [1]    # on or off
+precrush        categorical {0, 1} [0]    # on or off
 predeprow       categorical {-1, 0, 1} [-1]    # on or off
 auto_predual_on     categorical {0, 1} [1]
 predual             categorical {0, 1, 2} [0]    # three types of model dualisation 
@@ -76,51 +76,52 @@ varbranch         categorical {0, 1, 2, 3} [0]         # different types of vari
 auto_zeroobjnodes_on    categorical {0, 1} [1]
 zeroobjnodes    integer     [0, 2000000] [1000000] # int in [0, MAXINT]
 
+
 ##MIP cuts parameters
 auto_cuts_on categorical {0, 1} [1]
 cuts         integer     [0, 3] [1]   # in increasing order of cut generation aggressiveness
 auto_bqpcuts_on categorical {0, 1} [1]
 bqpcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
-auto_cliquecuts_on categorical {0} [0]
-cliquecuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_covercuts_on categorical {0} [0]
-covercuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
+auto_cliquecuts_on categorical {0, 1} [1]
+cliquecuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_covercuts_on categorical {0, 1} [1]
+covercuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
 auto_cutaggpasses_on  categorical {0, 1} [1]
 cutaggpasses          integer     [1, 64] [16] log      # int in [0, MAXINT], values inspired by http://www.cs.ubc.ca/labs/beta/Projects/MIP-Config/gurobi_params.txt
 auto_cutpasses_on  categorical {0, 1} [1]
 cutpasses          integer     [1, 64] [16] log      # int in [0, MAXINT], values inspired by http://www.cs.ubc.ca/labs/beta/Projects/MIP-Config/gurobi_params.txt
-auto_flowcovercuts_on categorical {0} [0]
-flowcovercuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_flowpathcuts_on categorical {0} [0]
-flowpathcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_gomorypasses_on  categorical {0} [0]
-gomorypasses          integer     [0, 0] [0]    # int in [0, MAXINT], values inspired by http://www.cs.ubc.ca/labs/beta/Projects/MIP-Config/gurobi_params.txt
-auto_gubcovercuts_on categorical {0} [0]
-gubcovercuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_impliedcuts_on categorical {0} [0]
-impliedcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_infproofcuts_on categorical {0} [0]
-infproofcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_mipsepcuts_on categorical {0} [0]
-mipsepcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_mircuts_on categorical {0} [0]
-mircuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_modkcuts_on categorical {0} [0]
-modkcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_networkcuts_on categorical {0} [0]
-networkcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_projimpliedcuts_on categorical {0} [0]
-projimpliedcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
+auto_flowcovercuts_on categorical {0, 1} [1]
+flowcovercuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_flowpathcuts_on categorical {0, 1} [1]
+flowpathcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_gomorypasses_on  categorical {0, 1} [1]
+gomorypasses          integer     [1, 64] [16] log      # int in [0, MAXINT], values inspired by http://www.cs.ubc.ca/labs/beta/Projects/MIP-Config/gurobi_params.txt
+auto_gubcovercuts_on categorical {0, 1} [1]
+gubcovercuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_impliedcuts_on categorical {0, 1} [1]
+impliedcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_infproofcuts_on categorical {0, 1} [1]
+infproofcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_mipsepcuts_on categorical {0, 1} [1]
+mipsepcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_mircuts_on categorical {0, 1} [1]
+mircuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_modkcuts_on categorical {0, 1} [1]
+modkcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_networkcuts_on categorical {0, 1} [1]
+networkcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_projimpliedcuts_on categorical {0, 1} [1]
+projimpliedcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
 auto_relaxliftcuts_on categorical {0, 1} [1]
 relaxliftcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
 auto_rltcuts_on categorical {0, 1} [1]
 rltcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
-auto_strongcgcuts_on categorical {0} [0]
-strongcgcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_submipcuts_on categorical {0} [0]
-submipcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
-auto_zerohalfcuts_on categorical {0} [0]
-zerohalfcuts         integer     [0, 0] [0]   # in increasing order of cut generation aggressiveness
+auto_strongcgcuts_on categorical {0, 1} [1]
+strongcgcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_submipcuts_on categorical {0, 1} [1]
+submipcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
+auto_zerohalfcuts_on categorical {0, 1} [1]
+zerohalfcuts         integer     [0, 2] [1]   # in increasing order of cut generation aggressiveness
 
 #Conditionals Gurobi parameters
 issmethod | auto_issmethod_on == 0

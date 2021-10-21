@@ -1,0 +1,9 @@
+algo = python3 /your/path/here/aclib2/target_algorithms/mip/gurobi902/wrapper.py --runsolver-path /your/path/here/aclib2/runsolver/src/runsolver
+execdir = .
+deterministic = 1
+run_obj = runtime
+cutoff_time = 9600
+wallclock_limit = 86400
+paramfile = /your/path/here/aclib2/target_algorithms/mip/gurobi902/params.pcs
+instance_file = /your/path/here/aclib2/instances/mip/sets/SDPdMLPa-MIPVerify/training.txt
+test_instance_file = /home/koenig/aclib2/instances/mip/sets/SDPdMLPa-MIPVerify/test.txt

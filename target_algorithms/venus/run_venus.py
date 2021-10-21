@@ -247,19 +247,19 @@ def main():
                                      epilog="Exactly one of the parameters --acas_prop or --lrob_input is required.")
     parser.add_argument("--property", choices=["acas", "lrob"], default="lrob",
                         help="Verification property, one of acas or lrob (local robustness).")
-    parser.add_argument("--net", type=str, default="/home/koenig/venus-1.01/resources/mnist/RSL18a-linf01.h5",
+    parser.add_argument("--net", type=str, default="/your/path/here/networks/RSL18a-linf01.h5",
                         help="Path to the neural network in Keras format.")
     parser.add_argument("--acas_prop", type=int, default=None,
                         help="Acas property number from 0 to 10. Default value is 1.")
     parser.add_argument("--lrob_input", type=str, default=None,
                         help="Path to the original input and the correct label for the local robustness property in the pickle format.")
-    parser.add_argument("--lrob_radius", default=0.05, type=float,
+    parser.add_argument("--lrob_radius", default=0.1, type=float,
                         help="Perturbation radius for L_inifinity norm. Default value is 0.1.")
-    parser.add_argument("--st_ratio", default=0.4, type=float,
+    parser.add_argument("--st_ratio", default=0.5, type=float,
                         help="Cutoff value of the stable ratio during the splitting procedure. Default value is 0.5.")
-    parser.add_argument("--depth_power", default=4.0, type=float,
+    parser.add_argument("--depth_power", default=1.0, type=float,
                         help="Parameter for the splitting depth. Higher values favour splitting. Default value is 1.")
-    parser.add_argument("--splitters", default=1, type=int,
+    parser.add_argument("--splitters", default=0, type=int,
                         help="Determines the number of splitting processes = 2^splitters. Default value is 0.")
     parser.add_argument("--workers", default=1, type=int,
                         help="Number of worker processes. Default value is 1.")
@@ -271,7 +271,7 @@ def main():
                         help="Whether to include online ideal cuts (through solver callbacks) or not. Default value is True.")
     parser.add_argument("--opt_bounds", default=False, type=boolean_string,
                         help="Whether to optimise bounds using linear relaxation or not. Default value is False.")
-    parser.add_argument("--timeout", default=24000, type=int,
+    parser.add_argument("--timeout", default=100000, type=int,
                         help="Timeout in seconds. Default value is 3600.")
     parser.add_argument("--logfile", default=None, type=str,
                         help="Path to logging file.")

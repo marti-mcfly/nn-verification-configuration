@@ -31,7 +31,7 @@ class PipelineWrapper(AbstractWrapper):
 		Returns:
 			A command call list to execute the target algorithm.
 		'''
-		binary_path = "/home/koenig/aclib2/target_algorithms/mip/gurobi902-1thread/run_gurobi.py"
+		binary_path = "/your/path/here/aclib2/target_algorithms/mip/gurobi902/run_gurobi.py"
 		cmd = "python %s --name %s" %(binary_path, runargs["instance"])
 		for name, value in config.items():
 			cmd += " -%s %s" %(name,  value)

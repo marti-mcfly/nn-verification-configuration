@@ -75,7 +75,7 @@ The resulting Gurobi configuration(s) can be set directly in Venus to perform ev
 To configure MIPVerify, we extracted MIP problem formulations and configure Gurobi independently. To start the configuration procedure, you should
 
 1. adapt the binary path in ```target_algorithms/gurobi902/wrapper.py```;
-2. specify a scenario for SMAC (see ```example_scenario_venus.txt``` for reference) and place it in the respective aclib folder
+2. specify a scenario for SMAC (see ```example_scenario_gurobi.txt``` for reference) and place it in the respective aclib folder
 3. run Hydra as outlined above.
 
 The resulting Gurobi configuration(s) can be set directly in MIPVerify to perform evaluation on the full MNIST dataset; please follow the documentation on https://vtjeng.com/MIPVerify.jl/v0.2/. 

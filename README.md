@@ -9,6 +9,8 @@ This repository provides
 - an example for the configuration of the Venus verifier [1]
 - an example for the configuration of the MIPVerify verifier [2]
 
+In both cases, the considered network is an MNIST classifier designed for robustness taken from [3].
+
 # Usage
 
 ## Required tools:
@@ -40,6 +42,15 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 ```
 
+## General setup
+
+Once you have downloaded the aclib library and installed its requirements, you should
+
+1. place the contents from ```instances``` in the similary named folder in aclib;
+2. place the contents from ```target_algorithms``` in the similary named folder in aclib;
+3. create a scenario file (see ```example_scenario``` for reference);
+4. create a hydra script (see ```example_hydra_script``` for reference).
+
 ## Configure Venus
 
 
@@ -49,3 +60,5 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299
 
 [2] Tjeng V, Xiao K, Tedrake R (2019) Evaluating Robustness of Neural Networks with Mixed Integer Programming. In: Proceedings of the 7th International Conference on Learning Representations (ICLR 2019)
+
+[3] Raghunathan A, Steinhardt J, Liang P (2018) Certified Defenses against Adversarial Examples. arXiv preprint arXiv:180109344

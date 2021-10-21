@@ -48,11 +48,10 @@ Once you have downloaded the aclib library and installed its requirements, you s
 
 1. place the contents from ```instances``` in the similary named folder in aclib;
 2. place the contents from ```target_algorithms``` in the similary named folder in aclib;
-3. create a scenario file (see ```example_scenario``` for reference);
+3. create a scenario file (see ```example_scenario_venus``` ```example_scenario_mipverify``` for reference);
 4. create a hydra script (see ```example_hydra_script``` for reference).
 
 ## Configure Venus
-
 
 
 

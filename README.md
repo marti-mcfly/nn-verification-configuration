@@ -65,7 +65,7 @@ To configure Venus, we use a wrapper that directly accesses the Gurobi parameter
 2.  adapt the binary path in ```target_algorithms/venus/wrapper.py```;
 3.  specify a scenario for SMAC (see ```example_scenario_venus.txt``` for reference) and place it in the respective aclib folder;
 4.  run Hydra with the following commands: ```/your/path/here/hydra-1.1-development-cae8151/bin/hydra --num-iterations 4 --num-smac-runs 2 --num-configs-per-iter 1 --rungroup Hydra_Venus --num-run 1 --smacOptions /your/path/here/aclib2/scenarios/.../your-scenario-file.txt --smac-execution-options /your/path/here/hydra-1.1-development-cae8151/smac-execution-options-local.txt```;
-5.  the resulting Gurobi configuration(s) can be set directly in Venus to perform evaluation on the full MNIST dataset (we provide a full version of the MNIST dataset in ```.pkl``` format, see ```MNIST-full```.
+5.  the resulting Gurobi configuration(s) can be set directly in Venus to perform evaluation on the full MNIST dataset (we provide a full version of the MNIST dataset in ```.pkl``` format, see ```MNIST-full```).
 
 # References
 [1] Botoeva E, Kouvaros P, Kronqvist J, Lomuscio A, Misener R (2020) Efficient Verification of ReLU-based Neural Networks via Dependency Analysis. In: Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI20), pp 3291–3299

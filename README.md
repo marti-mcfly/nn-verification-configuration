@@ -44,8 +44,8 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 
 ## Install Venus requirements
 
-```sh
-pip3 install -r requirements.txt
+```
+pip3 install -r venus-requirements.txt
 ```
 
 ## General setup

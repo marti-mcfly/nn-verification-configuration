@@ -63,7 +63,7 @@ Once you have downloaded the aclib library and installed its requirements, you s
 
 ## Configure Venus
 
-To configure Venus, we use a wrapper that directly accesses the Gurobi parameters through the Venus interface. To start the configuration procedure, you should
+To configure Venus, we used a wrapper that directly accesses the Gurobi parameters through the Venus interface. To start the configuration procedure, you should
 
 1.  adapt the network path in ```target_algorithms/venus/run_venus.py```;
 2.  adapt the binary path in ```target_algorithms/venus/wrapper.py```;
@@ -76,7 +76,7 @@ The resulting Gurobi configuration(s) can be set directly in Venus to perform ev
 
 ## Configure MIPVerify
 
-To configure MIPVerify, we extracted MIP problem formulations and configure Gurobi independently. To start the configuration procedure, you should
+To configure MIPVerify, we extracted MIP problem formulations and configured Gurobi independently. To start the configuration procedure, you should
 
 1. adapt the binary path in ```target_algorithms/gurobi902/wrapper.py```;
 2. specify a scenario for SMAC (see ```example_scenario_gurobi.txt``` for reference) and place it in the respective aclib folder

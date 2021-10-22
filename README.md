@@ -2,7 +2,7 @@
 
 The companion repository to the paper 
 
-**Speeding Up Neural Network Robustness Verification via Algorithm Configuration and an Optimised Mixed Integer Linear Programming Solver Portfolio**, Matthias König, Holger H Hoos, Jan N van Rijn, *to be published. 
+**Speeding Up Neural Network Robustness Verification via Algorithm Configuration and an Optimised Mixed Integer Linear Programming Solver Portfolio**, Matthias König, Holger H Hoos, Jan N van Rijn, *to be published*. 
 
 **Abstract:** Despite their great success in recent years, neural networks have been found to be vulnerable to adversarial attacks. These attacks are often based on slight perturbations of given inputs that cause them to be misclassified. Several methods have been proposed to formally prove robustness of a given network against such attacks. However, these methods typically give rise to high computational demands, which severely limit their scalability. Recent state-of-the-art approaches state the verification task as a minimisation problem, which is formulated and solved as a mixed-integer linear programming (MIP) problem. We extend this approach by leveraging automated algorithm configuration techniques and, more specifically, construct a portfolio of MIP solver configurations optimised for the neural network verification task. We test this approach on two recent, state-of-the-art MIP-based verification engines, MIPVerify and Venus, and achieve substantial improvements in CPU time by average factors of up to 4.7 and 10.3, respectively.
 
